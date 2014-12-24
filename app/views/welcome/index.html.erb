@@ -1,42 +1,13 @@
 <h1>Craigslist Rails version</h1>
 
-
-<h2>Choose your poison:</h2>
-
 <div id="options_container" style="position:absolute;left:20px">
-  <li><%= link_to "View all categories", controller: "categories" %></li>
+  <li><%= link_to "View all categories", categories_path %></li>
   </br>
 
+  <li><%= link_to "Create new category", new_category_path %></li>
+  </br>
 
-
-  <li><a>View all posts in a category:</a>
-    <form style="display:inline" action="/categories" method="post" name="the_viewpost_form">
-    <select name="category" onchange="this.form.submit()">
-    <option value="select">Select category</option>
-    <option value="Electronics">Electronics</option>
-    <option value="Jobs">Jobs</option>
-    <option value="Automotive">Automotive</option>
-    </select>
-  </form>
-  </br></li>
+  <li><%= link_to "Create new post", new_post_path %></li>
 
   </br>
-  <li><a href="/createpost">Create new post</a></br></li>
-
-  </br>
-  <li>
-    <a>Edit a post:</a>
-      <div id="post_cat" style=display:inline;padding-left:20px>
-        <form style="display:inline" action="/" method="post" name="the_select_cat_change_form">
-        <select name="category" onchange="this.form.submit()">
-        <option value="select">Select category</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Jobs">Jobs</option>
-        <option value="Automotive">Automotive</option>
-        </select>
-    </form>
-    </div>
-
-  </li>
-
 </div>

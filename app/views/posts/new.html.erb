@@ -1,0 +1,31 @@
+<h2>Herrow, let's create a new post</h2>
+
+<%= form_for @post do |p| %>
+
+  <p>
+    <%= p.label :category %></br>
+    <%= p.select :category_id, options_for_select(@categories) %>
+  </p>
+
+  <p>
+    <%= p.label :title %></br>
+    <%= p.text_field :title %>
+  </p>
+
+  <p>
+    <%= p.label :email %></br>
+    <%= p.text_field :email %>
+  </p>
+
+  <p>
+    <%= p.label :description %></br>
+    <%= p.text_area :description %>
+  </p>
+
+  <p>
+    <%= p.submit %>
+  </p>
+
+<% end %>
+
+<%= render "home" %>

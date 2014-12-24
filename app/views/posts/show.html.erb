@@ -1,0 +1,17 @@
+<p>
+  Title: <%= @post.title %>
+</p>
+
+<p>
+  Category ID: <%= @post.category_id %>
+</p>
+
+<p>
+  Description: <%= @post.description %>
+</p>
+
+<p>
+  Email: <a href=mailto:<%= @post.email %>><%= @post.email %></a>
+</p>
+
+<%= render 'home' %>
